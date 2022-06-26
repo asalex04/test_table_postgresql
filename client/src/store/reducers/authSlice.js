@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     isAuth: false,
@@ -10,19 +10,19 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
-        usersFetching(state) {
+        tableFetching(state) {
             state.isLoading = true
         },
-        usersFetchingSuccess(state) {
+        tableFetchingSuccess(state) {
             state.error = ''
             state.isLoading = false
         },
-        usersFetchingError(state, action) {
+        tableFetchingError(state, action) {
             state.isLoading = false
             state.error = action.payload
         },
     }
 })
 
-export const {usersFetching, usersFetchingError} = authSlice.actions
+export const {tableFetching, tableFetchingError, tableFetchingSuccess} = authSlice.actions
 export default authSlice.reducer
