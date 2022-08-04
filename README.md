@@ -4,15 +4,15 @@ Test task
 
 ### Install
 ```
-$ npm install
+$ make install
 ```
 
 ### Start server
 ```
-$ npm run dev
+$ make dev
 ```
 
 ### Start app
 ```
-$ npm start
+$ make start
 ```
